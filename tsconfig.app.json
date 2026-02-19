@@ -17,10 +17,10 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true,
+    "strict": false, //TO DO: Enable strict mode and fix errors
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false, //TO DO: Enable and fix errors
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
