@@ -14,12 +14,12 @@ function App() {
       <h1>Habit List</h1>
 
       {isPending && <p>Loading...</p>}
-      {isError && <p>Something went wrong ❌</p>}
+      {isError && <p>Something went wrong</p>}
 
       <ul>
         {habits.map((habit) => (
           <li key={habit.id}>
-            {habit.title} — {habit.completed ? '✅ Done' : '❌ Not Done'}
+            {habit.title} — {habit.completed ? 'Done' : ' Not Done'}
           </li>
         ))}
       </ul>
