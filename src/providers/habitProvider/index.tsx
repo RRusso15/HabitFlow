@@ -11,7 +11,7 @@ export const HabitProvider=({ children }: { children: React.ReactNode }) => {
     
     const getHabits = async () => {
         dispatch(getHabitsPending());
-        const endpoint = '/todos?_limit=10';
+        const endpoint = '/todos?_limit=30';
         await instance.get<IHabit[]>(endpoint)
             .then(response => dispatch(getHabitsSuccess(response.data)))
             .catch(error => dispatch(getHabitsError()));
