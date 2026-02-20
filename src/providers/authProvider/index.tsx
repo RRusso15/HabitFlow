@@ -43,6 +43,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           id: 1,
           name: "John Doe",
           email,
+          role: "user",
         };
 
         const mockToken = "mock-jwt-token";
@@ -71,6 +72,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         id: Date.now(),
         name,
         email,
+        role: "user"
       };
 
       const mockToken = "mock-jwt-token";

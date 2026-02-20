@@ -1,16 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App'
-import { HabitProvider } from './providers/habitProvider'
-import { AuthProvider } from './providers/authProvider'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
 
-createRoot(document.getElementById('root')!).render(
+import AppRoutes from "./routes";
+import { HabitProvider } from "./providers/habitProvider";
+import { AuthProvider } from "./providers/authProvider";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <AuthProvider>
-      <HabitProvider>
-        <App />
-      </HabitProvider>
-    </AuthProvider>
-  </StrictMode>,
-)
+    <BrowserRouter>
+      <AuthProvider>
+        <HabitProvider>
+          <AppRoutes />
+        </HabitProvider>
+      </AuthProvider>
+    </BrowserRouter>
+  </StrictMode>
+);
